@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystic Realms - News</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Verdana", sans-serif;
+      background-color: #0a0a0a;
+      color: #ddd;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #111, #000);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 4px solid crimson;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.2em;
+      color: crimson;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px black, 0 0 15px crimson;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      background: #1a1a1a;
+      border-bottom: 3px solid crimson;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: crimson;
+      color: #0a0a0a;
+    }
+
+    .news-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .news-card {
+      background: #1a1a1a;
+      border: 2px solid crimson;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .news-card:hover {
+      transform: scale(1.02);
+      background: #2a0a0a;
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 2px solid crimson;
+    }
+
+    .news-card .content {
+      padding: 15px;
+    }
+
+    .news-card h2 {
+      margin: 0 0 10px;
+      color: crimson;
+      font-size: 1.2em;
+    }
+
+    .news-card p {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .news-card a {
+      text-decoration: none;
+      font-weight: bold;
+      color: crimson;
+      transition: 0.3s;
+    }
+
+    .news-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #111;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid crimson;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    /* Reduce nav link padding on small screens */
+    @media (max-width: 500px) {
+      nav a {
+        padding: 10px 15px;
+        font-size: 0.9em;
+      }
+    }
+
+    /* Make news cards stack nicely on small screens */
+    @media (max-width: 500px) {
+      .news-list {
+        grid-template-columns: 1fr; /* single column */
+        gap: 15px;
+        padding: 10px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MYSTIC REALMS - NEWS</h1>
+  </header>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/news">News</a>
+    <a href="/nfts">NFTs</a>
+    <a href="/chronicles">Chronicles</a>
+    <a href="/crypto">Crypto</a>
+  </nav>
+
+  <main class="news-list">
+    <!-- News Card Example -->
+    <div class="news-card">
+      <img src="https://via.placeholder.com/400x200" alt="News Thumbnail">
+      <div class="content">
+        <h2>Shadow War Begins</h2>
+        <p>The ancient conflict stirs once more. Dark forces awaken...</p>
+        <a href="post1.html">Read More →</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="https://via.placeholder.com/400x200" alt="News Thumbnail">
+      <div class="content">
+        <h2>The Crimson NFT</h2>
+        <p>A forbidden relic surfaces in the black markets of the abyss.</p>
+        <a href="post2.html">Read More →</a>
+      </div>
+    </div>
+
+    <div class="news-card">
+      <img src="https://via.placeholder.com/400x200" alt="News Thumbnail">
+      <div class="content">
+        <h2>Chronicles Unearthed</h2>
+        <p>Lost tales emerge from hidden crypts deep beneath the realm.</p>
+        <a href="post3.html">Read More →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Mystic Realms. All rights reserved.
+  </footer>
+</body>
+</html>
