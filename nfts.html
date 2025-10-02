@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mystic Realms - NFTs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Verdana", sans-serif;
+      background-color: #0a0a0a;
+      color: #ddd;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #111, #000);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 4px solid crimson;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3.2em;
+      color: crimson;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px black, 0 0 15px crimson;
+    }
+
+    nav {
+      flex-wrap: flex;
+      display: flex;
+      justify-content: center;
+      background: #1a1a1a;
+      border-bottom: 3px solid crimson;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: crimson;
+      color: #0a0a0a;
+    }
+
+    .nft-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .nft-card {
+      background: #1a1a1a;
+      border: 2px solid crimson;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .nft-card:hover {
+      transform: scale(1.02);
+      background: #2a0a0a;
+    }
+
+    .nft-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 2px solid crimson;
+    }
+
+    .nft-card .content {
+      padding: 15px;
+    }
+
+    .nft-card h2 {
+      margin: 0 0 10px;
+      color: crimson;
+      font-size: 1.2em;
+    }
+
+    .nft-card p {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    .nft-card a {
+      text-decoration: none;
+      font-weight: bold;
+      color: crimson;
+      transition: 0.3s;
+    }
+
+    .nft-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 40px;
+      background: #111;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid crimson;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MYSTIC REALMS - NFTs</h1>
+  </header>
+
+  <nav>
+    <a href="/index">Home</a>
+    <a href="/news">News</a>
+    <a href="/nfts">NFTs</a>
+    <a href="/chronicles">Chronicles</a>
+    <a href="/crypto">Crypto</a>
+  </nav>
+
+  <main class="nft-list">
+    <!-- NFT Card Example -->
+    <div class="nft-card">
+      <img src="https://via.placeholder.com/400x200" alt="NFT Thumbnail">
+      <div class="content">
+        <h2>The Shadowed Relic</h2>
+        <p>A cursed digital artifact said to hold forgotten power.</p>
+        <a href="nft1.html">View NFT →</a>
+      </div>
+    </div>
+
+    <div class="nft-card">
+      <img src="https://via.placeholder.com/400x200" alt="NFT Thumbnail">
+      <div class="content">
+        <h2>Eternal Ember</h2>
+        <p>Flames that burn forever within the blockchain abyss.</p>
+        <a href="nft2.html">View NFT →</a>
+      </div>
+    </div>
+
+    <div class="nft-card">
+      <img src="https://via.placeholder.com/400x200" alt="NFT Thumbnail">
+      <div class="content">
+        <h2>Phantom Mask</h2>
+        <p>A spectral token worn by unseen entities of the void.</p>
+        <a href="nft3.html">View NFT →</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Mystic Realms. All rights reserved.
+  </footer>
+</body>
+</html>
