@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mystical Realm</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Verdana", sans-serif;
+      background-color: #0a0a0a;
+      color: #ddd;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    
+    .rain {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      
+    } 
+
+    .rain section:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('./images/rain.png');
+      background-repeat: repeat; /* Ensure the rain repeats across the screen */
+      animation: rain 0.3s linear infinite;
+      pointer-events: none; /* Optional: prevents interference with clicks */
+      z-index: 2; /* Ensure rain is in front of the sci-fi background */
+    }
+    
+    @keyframes rain {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 20% 100%;
+      }
+    
+    }
+
+    header {
+      background: linear-gradient(to bottom, #111, #000);
+      padding: 25px;
+      padding-bottom: 15px;
+      text-align: center;
+      opacity: 0.7;
+      border-bottom: 4px solid crimson;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+      color: crimson;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px black, 0 0 15px crimson;
+    }
+
+    nav {
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: center;
+      background: #1a1a1a;
+      border-bottom: 3px solid crimson;
+    }
+
+    nav a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 15px 25px;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: crimson;
+      color: #0a0a0a;
+    }
+
+    .chronicles-list {
+      /*display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));*/
+      gap: 20px;
+      padding: 20px;
+    }
+ 
+    
+    a.chronicle-card {
+      opacity: 0.9;
+      display: block; /* Ensures that the <a> takes up the full width of its container */
+      text-decoration: none; /* Removes underline from the anchor */
+      background: #1a1a1a; /* Keeps the background color */
+      border: 2px solid crimson; /* Keeps the border around the card */
+      border-radius: 8px; /* Keeps the border-radius */
+      box-shadow: 0 0 10px #000; /* Keeps the shadow */
+      overflow: hidden; /* Prevents the content from spilling out */
+      transition: 0.3s; /* Retains hover effect */
+    }
+
+    a.chronicle-card:hover {
+      transform: scale(1.02); /* Keeps hover effect */
+      background: #2a0a0a; /* Keeps background change on hover */
+    }
+
+    a.chronicle-card img {
+      width: 100%; /* Ensures images stretch to fill the container */
+      height: 100%;
+      max-height: 500px;
+      object-fit: cover;
+      border-bottom: 2px solid crimson; /* Keeps the border between the images */
+    }
+
+    a.chronicle-card .content {
+      padding: 15px; /* Ensures content inside the card stays correctly padded */
+    }
+
+    a.chronicle-card h2 {
+      margin: 0 0 10px;
+      color: crimson;
+      font-size: 1.2em;
+    }
+
+    a.chronicle-card p {
+      font-size: 0.9em;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    a.chronicle-card a {
+      text-decoration: none;
+      font-weight: bold;
+      color: crimson;
+      transition: 0.3s;
+    }
+
+    a.chronicle-card a:hover {
+      text-decoration: underline;
+    }
+
+
+    footer {
+      margin-top: 40px;
+      background: #111;
+      opacity: 0.6;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid crimson;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+
+</head>
+<body>
+   <div class="rain">
+     <section></section>
+   </div>
+<!-- html -->
+   <header>
+      <h1>MYSTIC REALMS</h1>
+   </header>
+   <main class="chronicles-list">
+   <a href="index.html" class="chronicle-card">
+      <div>
+         <img class="mySlides fade" src="images/image1.png" alt="Image 1">
+         <img class="mySlides fade" src="images/image2.png" alt="Image 2">
+         <img class="mySlides fade" src="images/image3.png" alt="Image 3">
+      </div>
+   </a>
+   </main>
+
+<!-- html -->
+
+
+
+   <script>
+      let slides = document.getElementsByClassName("mySlides");
+
+      function hideSlide() {
+         slides[1].style.display = "none"; // Hide slide 2
+         slides[2].style.display = "none"; // Hide slide 3
+      }
+      function slideOne() {
+         slides[0].style.display = "block";
+      }
+      function slideTwo() {
+         slides[1].style.display = "block";
+      }
+      function slideThree() {
+         slides[2].style.display = "block";
+      }
+      function slideOneq() {
+         slides[0].style.display = "none";
+      }
+      function slideTwoq() {
+         slides[1].style.display = "none";
+      }
+      function slideThreeq() {
+         slides[2].style.display = "none";
+      }
+
+      function redirectToHome() {
+         window.location.href = "index.html"; // Redirect to index.html
+      }
+      
+      hideSlide();      
+      slideOne();
+      setTimeout(slideTwo, 5000);      
+      setTimeout(slideOneq, 5000);
+      setTimeout(slideThree, 14000);
+      setTimeout(slideTwoq, 14000);
+      <!-- setTimeout(redirectToHome, 21000); -->
+      
+   </script>
+</body>
+   <footer>
+      &copy; 2025 Mystic Realms. All rights reserved.
+   </footer>
+</html>
+
+<!-- can literally make animations by layering transparent images
+with just the for loop. over and over -->
